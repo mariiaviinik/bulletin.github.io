@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Message Board (Pure HTML JS CSS)</title>
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/index.js"></script>
+      <script src="db.json"></script>
+</head>
+
+<body onload="loadJSON()">
+    <div class="wrap"> 
+        <div>
+            <span class="title">Добавить объявление</span>
+        </div>
+        <div>
+            <!-- <h1 class="title"> Filters </h1> -->
+            
+            <div class="byUser">
+                <span class="title">All post by User : </span>
+                    <select id="category">
+                    <!-- <option value=0>All</option> -->
+                    </select>
+                    <button type="button" onclick="searchUser()">Search </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="wrap">
+  <div><h1 class="title">Posts</h1></div>
+  <p class="reply">
+  </p>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+</body>
+</html>
