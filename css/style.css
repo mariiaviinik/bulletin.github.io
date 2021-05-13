@@ -1,9 +1,13 @@
 body{
-	font: 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
+	font: 15px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
 	text-transform: inherit;
 	color: #333;
-	background: #e7edee;
+	background: #3f909e;
 	width: 100%;
+}
+a{
+	color: white;
+	text-decoration: none;
 }
 .wrap{
 	width: 720px;
@@ -15,18 +19,47 @@ body{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-.title, .userName {
+.advTitle{
+	padding: 15px 5px;
+	margin: 0;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #3f909e;
+	color: white;
+}
+.menu{
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: space-between;
+	text-align: center;
+}
+.userName {
   font-weight:700;
+  margin: 5px 0;
+}
+
+.holder{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   padding: 5px 0;
+}
+
+.bottomLine{
+  border-bottom: 1px solid rgba(102, 98, 98, 0.842);
+  padding: 5px 0;
 }
 
 .post {
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
+  border-bottom: 4px solid  #3f909e;
+  padding: 0 5px 20px;
 }
 
-.post .title{
+/* .post .title{
   font-style:italic;
-}
+} */
 .post .body{
   margin-top:5px;
 }
