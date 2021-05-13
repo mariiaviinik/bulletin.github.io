@@ -5,35 +5,47 @@
   <meta charset="UTF-8">
   <title>Simple Message Board (Pure HTML JS CSS)</title>
       <link rel="stylesheet" href="css/style.css">
-      <script src="js/index.js"></script>
-      <script src="db.json"></script>
 </head>
 
-<body onload="loadJSON()">
+<body>
     <div class="wrap"> 
-        <div>
-            <span class="title">Добавить объявление</span>
+        <div class="menu advTitle">
+            <a href="" class="title">Мої оголошення</a>
+            <a href="" class="title">Переглянути інші</a>
+            <a href="" class="title">Додати оголошення</a>
         </div>
-        <div>
-            <!-- <h1 class="title"> Filters </h1> -->
+        <h1 class="title"> Filters </h1>
+        <div class="menu">
             
             <div class="byUser">
                 <span class="title">All post by User : </span>
-                    <select id="category">
-                    <!-- <option value=0>All</option> -->
+                    <select id="users">
+                        <option value=0>All</option>
                     </select>
                     <button type="button" onclick="searchUser()">Search </button>
             </div>
+            
+            <div class="byCategory">
+                <span class="title">All post by Category : </span>
+                    <select id="category">
+                        <option value=0>All</option>
+                        <option value="1">Нерухомість</option>
+                        <option value="2">Все для дому</option>
+                        <option value="3">Транспорт</option>
+                        <option value="4">Техніка</option>
+                        <option value="5">Одяг</option>
+                    </select>
+                    <button type="button" onclick="searchCategory()">Search </button>
+            </div>
         </div>
     </div>
-
-
-<div class="wrap">
-  <div><h1 class="title">Posts</h1></div>
-  <p class="reply">
-  </p>
-</div>
+    <div class="wrap">
+        <div><h1 class="title advTitle">Оголошення</h1></div>
+        <div class="reply"></div>
+    </div>
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>   -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
+  <script src="js/index.js"></script>
 </body>
 </html>
