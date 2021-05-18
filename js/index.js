@@ -183,7 +183,7 @@ $(document).ready(function() {
     }
   });
   $("body").on("click", "#up", function(){
-    // $(window).scrollTop(0);
+    $(window).scrollTop(0);
   });
   let leftVal;
   $(window).scroll(function(){
