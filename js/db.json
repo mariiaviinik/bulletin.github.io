@@ -1,112 +1,27 @@
 [
   {
-    "db": [
-      {
-        "userId": 1,
-        "id": 1,
-        "category": "Нерухомість",
-        "type": "Продаж",
-        "text": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-      },
-      {
-        "userId": 1,
-        "id": 2,
-        "category": "Нерухомість",
-        "type": "Продаж",
-        "title": "qui est esse",
-        "text": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-      },
-      {
-        "userId": 1,
-        "id": 3,
-        "category": "Техніка",
-        "type": "Продаж",
-        "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-        "text": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-      },
-      {
-        "userId": 1,
-        "id": 4,
-        "category": "Техніка",
-        "type": "Продаж",
-        "title": "eum et est occaecati",
-        "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-      },
-      {
-        "userId": 2,
-        "id": 12,
-        "title": "in quibusdam tempore odit est dolorem",
-        "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
-      }
-    ]
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
   },
   {
-    "users": [
-      {
-        "id": 1,
-        "name": "Винник Марія",
-        "username": "mariiavinnik",
-        "email": "Sincere@april.biz",
-        "phone": "1-770-736-8031 x56442",
-        "company": "XADO",
-        "city": "Київ"
-      },
-      {
-        "id": 2,
-        "name": "Ervin Howell",
-        "username": "Antonette",
-        "email": "Shanna@melissa.tv",
-        "address": {
-          "street": "Victor Plains",
-          "suite": "Suite 879",
-          "city": "Wisokyburgh",
-          "zipcode": "90566-7771",
-          "geo": {
-            "lat": "-43.9509",
-            "lng": "-34.4618"
-          }
-        },
-        "phone": "010-692-6593 x09125",
-        "website": "anastasia.net",
-        "company": {
-          "name": "Deckow-Crist",
-          "catchPhrase": "Proactive didactic contingency",
-          "bs": "synergize scalable supply-chains"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Clementine Bauch",
-        "username": "Samantha",
-        "email": "Nathan@yesenia.net",
-        "address": {
-          "street": "Douglas Extension",
-          "suite": "Suite 847",
-          "city": "McKenziehaven",
-          "zipcode": "59590-4157",
-          "geo": {
-            "lat": "-68.6102",
-            "lng": "-47.0653"
-          }
-        },
-        "phone": "1-463-123-4447",
-        "website": "ramiro.info",
-        "company": {
-          "name": "Romaguera-Jacobson",
-          "catchPhrase": "Face to face bifurcated interface",
-          "bs": "e-enable strategic applications"
-        }
-      }
-    ]
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   },
   {
-    "category": [
-      "Нерухомість",
-      "Все для дому",
-      "Транспорт",
-      "Техніка",
-      "Одяг"
-    ]
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
   },
   {
     "userId": 1,
@@ -149,6 +64,12 @@
     "id": 11,
     "title": "et ea vero quia laudantium autem",
     "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+  },
+  {
+    "userId": 2,
+    "id": 12,
+    "title": "in quibusdam tempore odit est dolorem",
+    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
   },
   {
     "userId": 2,
@@ -257,17 +178,5 @@
     "id": 30,
     "title": "a quo magni similique perferendis",
     "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
-  },
-  {
-    "userId": 4,
-    "id": 31,
-    "title": "ullam ut quidem id aut vel consequuntur",
-    "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
-  },
-  {
-    "userId": 4,
-    "id": 32,
-    "title": "doloremque illum aliquid sunt",
-    "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
   }
 ]

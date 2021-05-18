@@ -1,0 +1,125 @@
+body{
+    height: 100%;
+    margin: 0;
+    font: 15px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
+}
+input {
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #3f909e;
+    width: 100%;
+    height: 55px;
+    background: #ebebeb;
+    border-radius: 27px;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+.fieldsforCreate{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #3f909e;
+    width: 100%;
+    height: 55px;
+    background: #ebebeb;
+    border-radius: 27px;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+textarea{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #3f909e;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    background: #ebebeb;
+    border-radius: 27px;
+}
+.container-login{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrap-login{
+    width: 1000px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 0 10px;
+    overflow: hidden;
+}
+.m-12{
+    margin: 12px 0;
+}
+.login-form{
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.login-form-title{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    /* border-radius: 0 20px 0 0; */
+    top: 0;
+    left: 0;
+    background-color: #3f909e;
+    padding-top: 50px;
+    padding-bottom: 39px;
+}
+.m-b-50{
+    margin-bottom: 50px;
+}
+.wrap-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 27px;
+    position: relative;
+    z-index: 1;
+}
+.m-b-10{
+    margin-bottom: 10px;
+}
+.createBtn{
+    width: 100%;
+    height: 50px;
+    background-color: #3f909e;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.p-t-20{
+    padding-top: 20px;
+}
+.p-b-40{
+    padding-bottom: 40px;
+}
+.flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt1 {
+    font-size: 17px;
+    color: #999999;
+}
+.p-l-10{
+    padding-left: 10px;
+}
+.p-b-15{
+    padding-bottom: 15px;
+}
+.wid-20{
+    width: 120px;
+}

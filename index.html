@@ -5,47 +5,80 @@
   <meta charset="UTF-8">
   <title>Simple Message Board (Pure HTML JS CSS)</title>
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="postAdd/add.css">
 </head>
 
 <body>
-    <div class="wrap"> 
-        <div class="menu advTitle">
-            <a href="" class="title">Мої оголошення</a>
-            <a href="" class="title">Переглянути інші</a>
-            <a href="" class="title">Додати оголошення</a>
-        </div>
-        <h1 class="title"> Filters </h1>
-        <div class="menu">
-            
-            <div class="byUser">
-                <span class="title">All post by User : </span>
-                    <select id="users">
-                        <option value=0>All</option>
-                    </select>
-                    <button type="button" onclick="searchUser()">Search </button>
+    <div class="mainContainer">
+        <div class="wrap" id="fixedMenu"> 
+            <div class="holder">
+                <div class="menu advTitle">
+                    <ul style="width: 20%;">
+                        <li>ТВОРЧА КРИЗА</li>
+                    </ul>
+                    <!-- <div style="width: 30%;">ТВОРЧА КРИЗА</div> -->
+                    <div>
+                        <ul class="menu">
+                            <li class="hover m-r-60" id="up">Вгору ⇧</li>
+                            <li class="hover">
+                                <a href="modal/register.html" class="hover m-r-60">Зареєструватися</a>
+                            </li>
+                            <li> 
+                                <a href="modal/modal.html" class="hover">Увійти</a>
+                            </li>
+                        </ul>
+                        <!-- <a href="modal/modal.html" class="hover m-r-30">Увійти</a>
+                        <a href="modal/register.html" class="hover m-r-30">Зареєструватися</a> -->
+                    </div>
+                </div>
             </div>
-            
-            <div class="byCategory">
-                <span class="title">All post by Category : </span>
-                    <select id="category">
-                        <option value=0>All</option>
-                        <option value="1">Нерухомість</option>
-                        <option value="2">Все для дому</option>
-                        <option value="3">Транспорт</option>
-                        <option value="4">Техніка</option>
-                        <option value="5">Одяг</option>
-                    </select>
-                    <button type="button" onclick="searchCategory()">Search </button>
+            <div class="holder hide">
+                <div class="menu advTitle">
+                    <ul class="menu">
+                        <li id="myAdv" class="hover">Мої оголошення</li>
+                        <li id="allAdv" class="hover">Переглянути всі</li>
+                        <li class="hover"> 
+                            <a href="postAdd/add.html">Додати оголошення</a>
+                        </li>
+                        <li id="exit" class="hover">Вийти</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <h2 class="filtrTitle">ФІЛЬТРИ</h2> -->
+            <div class="menu s-between m-t-15">                
+                <div class="byCategory">
+                    <span>Пошук за категорією : </span>
+                        <select id="category">
+                            <option value=0>Всі</option>
+                            <option value="1">Нерухомість</option>
+                            <option value="2">Все для дому</option>
+                            <option value="3">Транспорт</option>
+                            <option value="4">Техніка</option>
+                            <option value="5">Одяг</option>
+                        </select>
+                        <button type="button" onclick="searchCategory()">Пошук </button>
+                </div>
+    
+                <div class="byType">
+                    <span>Пошук за типом : </span>
+                        <select id="type">
+                            <option value=0>Всі</option>
+                            <option value="1">Продаж</option>
+                            <option value="2">Попит</option>
+                        </select>
+                        <button type="button" onclick="searchType()">Пошук </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="wrap">
-        <div><h1 class="title advTitle">Оголошення</h1></div>
-        <div class="reply"></div>
+        <div class="wrap">
+            <div><h2 class="advTitle">ОГОЛОШЕННЯ</h2></div>
+            <div class="reply"></div>
+        </div>
     </div>
     <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>   -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="modal/modal.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>

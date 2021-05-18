@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-login">
+        <div class="wrap-login m-12">
+            <div class="login-form-title m-b-50">
+                 Створи ідеальне оголошення
+            </div>
+            <form class="login-form validate-form">
+                <div class="wrap-input m-b-10" data-validate = "Please enter password">
+                    <span class="txt1 p-l-10 wid-20">
+                        Заголовок
+                    </span>
+                    <input class="input" type="text" id="titleForCreate" placeholder="Заголовок">
+                </div>
+
+                <div class="wrap-input m-b-10" data-validate="Please enter username">
+                    <span class="txt1 p-l-10 wid-20">
+                        Категорія
+                    </span>
+                    <select class="fieldsforCreate" id="categoryForCreate">                            
+                        <option>Нерухомість</option>
+                        <option>Все для дому</option>
+                        <option>Транспорт</option>
+                        <option>Техніка</option>
+                        <option>Одяг</option>
+                    </select>
+                </div>
+
+                <div class="wrap-input m-b-10" data-validate="Please enter username">
+                    <span class="txt1 p-l-10 wid-20">
+                        Тип
+                    </span>
+                    <select class="fieldsforCreate" id="typeForCreate">
+                        <option>Продаж</option>
+                        <option>Попит</option>
+                    </select>
+                </div>
+                
+                <div class="m-b-10" data-validate="Please enter username">
+                    <textarea id="bodyForCreate" placeholder="Текст оголошення" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="flex p-b-40 p-t-20">
+                    <span class="txt1 p-b-15">
+                        Чи точно ти заповнив всі поля?
+                    </span>
+
+                    <button class="createBtn">
+                        Створити оголошення
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="add.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
