@@ -185,13 +185,20 @@ $(document).ready(function() {
   $("body").on("click", "#up", function(){
     // $(window).scrollTop(0);
   });
+  let leftVal;
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 20 && document.body.scrollHeight > 804){
+    if ($(this).scrollTop() > 25){
       $("#fixedMenu").removeClass("default")
-      .addClass("fixed")
-    } else if($(this).scrollTop() < 20) {
+      .addClass("fixed");
+      $("#indent").removeClass("hide");
+      leftVal = $('#secondWrap').offset().left;;
+      $("#fixedMenu").offset({left: leftVal});
+    } else if($(this).scrollTop() < 25) {
       $("#fixedMenu").removeClass("fixed")
       .addClass("default");
+      $("#indent").addClass("hide");
+      leftVal = $('#secondWrap').offset().left;;
+      $("#fixedMenu").offset({left: leftVal});
     }
   });
 })

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simple Message Board (Pure HTML JS CSS)</title>
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="postAdd/add.css">
@@ -10,6 +11,7 @@
 
 <body>
     <div class="mainContainer">
+        <div class="hide" id="indent"></div>
         <div class="wrap" id="fixedMenu"> 
             <div class="holder">
                 <div class="menu advTitle">
@@ -70,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrap">
+        <div class="wrap" id="secondWrap">
             <div><h2 class="advTitle">ОГОЛОШЕННЯ</h2></div>
             <div class="reply"></div>
         </div>
