@@ -76,8 +76,7 @@ function makePosts(arr, db){
       removeDiv.append($('<div class="hide" id="userId"/>').append(data.userId));
       let categoryDiv = $('<div class="category"/>').append('Категорія: ', data.category);
       let typeDiv =  $('<div class="type"/>').append('Тип: ', data.type); 
-      let cityDiv = $('<div class="city"/>').append('Місто: ', usersList[data.userId - 1].city);
-      // let authorDiv = $('<div class="userName m-t-15"/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name));  
+      let cityDiv = $('<div class="city"/>').append('Місто: ', usersList[data.userId - 1].city); 
       let textDiv = $('<div class="body bottomLine"/>').append(data.text);
       let contactDiv = $('<div class="column"/>');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
