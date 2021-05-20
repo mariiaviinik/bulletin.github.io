@@ -6,10 +6,13 @@ $('#fileInput').change(function() {
 
   $("#imgShow").append(p);
 
+  console.log();
+
   let reader = new FileReader();
   reader.addEventListener("load", function(e) {
     base64 = e.target.result;
     p.innerHTML = file.name + " загружено";
+    console.log(base64);
   }); 
   reader.readAsDataURL(file);
 });
