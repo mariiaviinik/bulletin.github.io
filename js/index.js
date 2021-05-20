@@ -81,6 +81,9 @@ function makePosts(arr, db){
       let textDiv = $('<div class="body" style="align: top;" />').append(data.text);
       let imgDiv = document.createElement("img");
       imgDiv.src = data.img;
+      if( data.img != undefined){
+        contentDiv.append(imgDiv);
+      }
       let contactDiv = $('<div class="column floatImg topLine" />');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
       let emailD = $('<div class=""/>').append($('<span>').append('Email: ', usersList[data.userId - 1].email)); 
@@ -88,7 +91,7 @@ function makePosts(arr, db){
 
       titleContainer.append( titleDiv, removeDiv);
       describeDiv.append(categoryDiv, typeDiv, cityDiv);
-      contentDiv.append(imgDiv, textDiv);
+      contentDiv.append(textDiv);
       contactDiv.append(authorDiv, emailD, telD);
       divReply.append(post.append(titleContainer, describeDiv, contentDiv, contactDiv));
       

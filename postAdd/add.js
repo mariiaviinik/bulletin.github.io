@@ -1,8 +1,8 @@
 let base64;
+let p = document.createElement("p");
 
 $('#fileInput').change(function() {
   let file =$('#fileInput')[0].files[0];
-  let p = document.createElement("p");
 
   $("#imgShow").append(p);
 
