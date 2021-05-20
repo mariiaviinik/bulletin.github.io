@@ -70,6 +70,7 @@ function makePosts(arr, db){
       let post = $('<p class="post shadow"/>');
       let describeDiv = $('<div class="column bottomLine"/>');
       let titleContainer = $('<div class="menu title s-between m-t-15 m-b-15"/>');
+      let contentDiv = $('<div />');
 
       let titleDiv = $('<div class=""/>').append(data.title);
       let removeDiv = $('<div class="hover" id="delete"/>').append('✖').append($('<div class="hide" id="postId"/>').append(data.id));
@@ -77,16 +78,19 @@ function makePosts(arr, db){
       let categoryDiv = $('<div class="category"/>').append('Категорія: ', data.category);
       let typeDiv =  $('<div class="type"/>').append('Тип: ', data.type); 
       let cityDiv = $('<div class="city"/>').append('Місто: ', usersList[data.userId - 1].city); 
-      let textDiv = $('<div class="body bottomLine"/>').append(data.text);
-      let contactDiv = $('<div class="column"/>');
+      let textDiv = $('<div class="body" style="align: top;" />').append(data.text);
+      let imgDiv = document.createElement("img");
+      imgDiv.src = data.img;
+      let contactDiv = $('<div class="column floatImg topLine" />');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
       let emailD = $('<div class=""/>').append($('<span>').append('Email: ', usersList[data.userId - 1].email)); 
       let telD = $('<div class=""/>').append($('<span>').append('Tel: ', usersList[data.userId - 1].phone)); 
 
       titleContainer.append( titleDiv, removeDiv);
       describeDiv.append(categoryDiv, typeDiv, cityDiv);
+      contentDiv.append(imgDiv, textDiv);
       contactDiv.append(authorDiv, emailD, telD);
-      divReply.append(post.append(titleContainer, describeDiv, textDiv, contactDiv));
+      divReply.append(post.append(titleContainer, describeDiv, contentDiv, contactDiv));
       
     });
 }
