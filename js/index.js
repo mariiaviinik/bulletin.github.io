@@ -91,7 +91,8 @@ function makePosts(arr, db){
       }
       let showBtn = $('<button id="showContacts" />').append("Показати контактну інформацію");
       let hideBtn = $('<button id="hideContacts" class="hide" />').append("Приховати контактну інформацію");
-      let eye = $('<div id="views" />').append("👁 ").append(data.counter);
+      let eye = $('<div style="display:flex; margin-top:5px;" />').append($('<div style="margin-right:2px;" />').append("👁 "));
+      eye.append($('<div id="views" />').append(data.counter));
       let contactDiv = $('<div class="column floatImg topLine contacts" style="display:none;"/>');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
       let emailD = $('<div class=""/>').append($('<span>').append('Email: ', usersList[data.userId - 1].email)); 
@@ -179,6 +180,10 @@ $(document).ready(function() {
     let hB = $(event.target).parents('.post').children()[3].childNodes[1];
     sB.classList.toggle("hide");
     hB.classList.toggle("hide");
+    let eyeD = $(event.target).parents('.post').children()[3].childNodes[2];
+    let viewNum = +eyeD.querySelector("#views").innerText;
+    viewNum++;
+    eyeD.querySelector("#views").innerText = viewNum;
   });
   $("body").on("click", "#hideContacts", function(event){
     let contactD = $(event.target).parents('.post').children()[4];
@@ -188,6 +193,12 @@ $(document).ready(function() {
     sB.classList.toggle("hide");
     hB.classList.toggle("hide");
   });
+  // $("body").on("click", "#views", function(event){
+  //   let eyeD = $(event.target).parents('.post').children()[3].childNodes[2];
+  //   let viewNum = +eyeD.querySelector("#views").innerText;
+  //   viewNum++;
+  //   eyeD.querySelector("#views").innerText = viewNum;
+  // });
   $("body").on("click", "#delete", function(){
     if(curUser){
       // alert("Оголошення видалено");
