@@ -26,7 +26,8 @@ $(".createBtn").click(function(e){
       "category":  $('#categoryForCreate').children("option:selected").text(),
       "type":  $('#typeForCreate').children("option:selected").text(),
       "text":  $('#bodyForCreate').val(),
-      "img": base64
+      "img": base64,
+      "counter": 0
   };
   $('#titleForCreate').val("");
   $('#bodyForCreate').val("")
