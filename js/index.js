@@ -1,7 +1,9 @@
 let postList = [];
 let usersList = [];
-let urlPosts = 'https://test1-c5fc6-default-rtdb.firebaseio.com/0/db.json';
-let urlUsers = 'https://test1-c5fc6-default-rtdb.firebaseio.com/1/users.json';
+// let urlPosts = 'https://test1-c5fc6-default-rtdb.firebaseio.com/0/db.json';
+// let urlUsers = 'https://test1-c5fc6-default-rtdb.firebaseio.com/1/users.json';
+let urlPosts = 'https://database-dbbe2-default-rtdb.europe-west1.firebasedatabase.app/0/db.json';
+let urlUsers = 'https://database-dbbe2-default-rtdb.europe-west1.firebasedatabase.app/1/users.json';
 let filterArr = [];
 let curUser = localStorage.getItem('curUser');
 
@@ -32,10 +34,12 @@ function getUsers(){
         .then(function(dataList){
           usersList = Array.from(Object.values(dataList)); 
           usersList.forEach(function(data){
-            $('#users').append($('<option>', { 
-              value: data.id,
-              text : data.name 
-            }));
+            if(data){
+              $('#users').append($('<option>', { 
+                value: data.id,
+                text : data.name 
+              }));
+            }
           });
           getPosts("");
         })
@@ -124,7 +128,6 @@ function searchCategory(){
   }
   getPosts(filterArr);
 }
-
 
 function searchType(){
   let typeSelected = $('#type').children("option:selected").text();
