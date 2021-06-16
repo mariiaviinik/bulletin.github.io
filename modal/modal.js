@@ -1,18 +1,20 @@
 $(".signBtn").click(function(e){
     e.preventDefault();
-    // console.log($(".signBtn"));
     let curUsername = $('#username').val();
     let curPass = $('#pass').val();
     let res = false;
     // let id;
     usersList.forEach(function(user){
-        if(user.username === curUsername && user.password === curPass){
-            localStorage.setItem('curUser', user.id)
-            // console.log(curUser);
-            // $('#holder').toggle("hide");
-            alert("Вітаю вас :)");
-            res = true;
-            document.location.href = "../index.html";
+        console.log(!(user.username === null));
+        if(!(user.username === null)){
+            if(user.username === curUsername && user.password === curPass){
+                localStorage.setItem('curUser', user.id)
+                // console.log(curUsername);
+                // $('#holder').toggle("hide");
+                alert("Вітаю вас :)");
+                res = true;
+                document.location.href = "../index.html";
+            }
         }
     });
     if(!res){
