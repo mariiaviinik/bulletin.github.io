@@ -4,11 +4,11 @@ $(".signBtn").click(function(e){
     let curPass = $('#pass').val();
     let res = false;
     // let id;
-    usersList.forEach(function(user){
-        console.log(!(user.username === null));
-        if(!(user.username === null)){
-            if(user.username === curUsername && user.password === curPass){
-                localStorage.setItem('curUser', user.id)
+    for(data of usersList){
+    // usersList.forEach(function(user){
+        if(data){
+            if(data.username === curUsername && data.password === curPass){
+                localStorage.setItem('curUser', data.id)
                 // console.log(curUsername);
                 // $('#holder').toggle("hide");
                 alert("Вітаю вас :)");
@@ -16,7 +16,7 @@ $(".signBtn").click(function(e){
                 document.location.href = "../index.html";
             }
         }
-    });
+    }
     if(!res){
         alert("Нажаль, ви ще не зареєстровані або дані введені невірно :(");
     }
