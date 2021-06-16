@@ -91,6 +91,7 @@ function makePosts(arr, db){
       }
       let showBtn = $('<button id="showContacts" />').append("Показати контактну інформацію");
       let hideBtn = $('<button id="hideContacts" class="hide" />').append("Приховати контактну інформацію");
+      let eye = $('<div id="views" />').append("👁 ").append(data.counter);
       let contactDiv = $('<div class="column floatImg topLine contacts" style="display:none;"/>');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
       let emailD = $('<div class=""/>').append($('<span>').append('Email: ', usersList[data.userId - 1].email)); 
@@ -100,7 +101,7 @@ function makePosts(arr, db){
       describeDiv.append(categoryDiv, typeDiv, cityDiv);
       contentDiv.append(textDiv);
       contactDiv.append(authorDiv, emailD, telD);
-      lastDiv.append(showBtn, hideBtn);
+      lastDiv.append(showBtn, hideBtn, eye);
       divReply.append(post.append(titleContainer, describeDiv, contentDiv, lastDiv, contactDiv));
       
     });
