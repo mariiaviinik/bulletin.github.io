@@ -2,11 +2,13 @@ $(".registrBtn").click(function(e){
     e.preventDefault();
     let condition = true;
     for(data of usersList){
-      if(data.username === $('#username').val()) {
-        alert("Користувач з таким нікнеймом вже існує");
-        condition = false;
-        break;
-      } 
+      if(data){
+        if(data.username === $('#username').val()) {
+          alert("Користувач з таким нікнеймом вже існує");
+          condition = false;
+          break;
+        } 
+      }
     }
     if(condition){
       let id = usersList.length + 1;

@@ -71,10 +71,11 @@ function makePosts(arr, db){
     });
     
     db.forEach(function(data){
-      let post = $('<p class="post shadow"/>');
+      let post = $('<p class="post shadow "/>');
       let describeDiv = $('<div class="column bottomLine"/>');
       let titleContainer = $('<div class="menu title s-between m-t-15 m-b-15"/>');
-      let contentDiv = $('<div />');
+      let contentDiv = $('<div/>');
+      let lastDiv = $('<div class="floatImg" style="margin: 10px;" />');
 
       let titleDiv = $('<div class=""/>').append(data.title);
       let removeDiv = $('<div class="hover" id="delete"/>').append('✖').append($('<div class="hide" id="postId"/>').append(data.id));
@@ -88,7 +89,9 @@ function makePosts(arr, db){
       if( data.img != undefined){
         contentDiv.append(imgDiv);
       }
-      let contactDiv = $('<div class="column floatImg topLine" />');
+      let showBtn = $('<button id="showContacts" />').append("Показати контактну інформацію");
+      let hideBtn = $('<button id="hideContacts" class="hide" />').append("Приховати контактну інформацію");
+      let contactDiv = $('<div class="column floatImg topLine contacts" style="display:none;"/>');
       let authorDiv = $('<div class=""/>').append($('<span>').append('Автор: ', usersList[data.userId - 1].name)); 
       let emailD = $('<div class=""/>').append($('<span>').append('Email: ', usersList[data.userId - 1].email)); 
       let telD = $('<div class=""/>').append($('<span>').append('Tel: ', usersList[data.userId - 1].phone)); 
@@ -97,7 +100,8 @@ function makePosts(arr, db){
       describeDiv.append(categoryDiv, typeDiv, cityDiv);
       contentDiv.append(textDiv);
       contactDiv.append(authorDiv, emailD, telD);
-      divReply.append(post.append(titleContainer, describeDiv, contentDiv, contactDiv));
+      lastDiv.append(showBtn, hideBtn);
+      divReply.append(post.append(titleContainer, describeDiv, contentDiv, lastDiv, contactDiv));
       
     });
 }
@@ -166,6 +170,22 @@ $(document).ready(function() {
     document.location.href = "index.html";
     $('.holder').toggle("hide");
     getPosts("");
+  });
+  $("body").on("click", "#showContacts", function(event){
+    let contactD = $(event.target).parents('.post').children()[4];
+    contactD.style.display = "grid";
+    let sB = $(event.target).parents('.post').children()[3].childNodes[0];
+    let hB = $(event.target).parents('.post').children()[3].childNodes[1];
+    sB.classList.toggle("hide");
+    hB.classList.toggle("hide");
+  });
+  $("body").on("click", "#hideContacts", function(event){
+    let contactD = $(event.target).parents('.post').children()[4];
+    contactD.style.display = "none";
+    let sB = $(event.target).parents('.post').children()[3].childNodes[0];
+    let hB = $(event.target).parents('.post').children()[3].childNodes[1];
+    sB.classList.toggle("hide");
+    hB.classList.toggle("hide");
   });
   $("body").on("click", "#delete", function(){
     if(curUser){
